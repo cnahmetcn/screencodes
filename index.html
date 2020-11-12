@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="codemirror/theme/base16-dark.css" id="theme-css">
+
+     <title>Rhecanyx</title>
+</head>
+<body>
+     <div class="container">
+          <div class="navbar">
+               <div class="logo">
+                    Screen <br> Codes
+               </div>
+               <nav>
+                    <ul>
+                         <li>File Name <input type="text" id="set-title"></li>
+                         <li><span id="open-file-btn">Open File</span></li>
+                         <li><span id="line-numbers-btn">Line Number</span></li>
+                         <li>				
+                              <span>Lang</span>
+                              <select id="mode-switch-btn">
+                                   <option value="php">PHP</option>
+                                   <option value="css">CSS</option>
+                                   <option value="sass">SASS</option>
+                                   <option value="javascript" selected>JavaScript</option>
+                                   <option value="html">HTML</option>
+                                   <option value="dart">DART</option>
+                                   <option value="go">Go</option>
+                                   <option value="markdown">Markdown</option>
+                                   <option value="python">Python</option>
+                                   <option value="r">R</option>
+                                   <option value="ruby">Ruby</option>
+                                   <option value="shell">Shell</option>
+                                   <option value="sql">Sql</option>
+                                   <option value="swift">Swift</option>
+                                   <option value="vb">VB</option>
+                                   <option value="vue">Vue</option>
+                              </select>
+                         </li>
+                         <li>
+                              <span>Theme</span>
+                              <select id="theme-switch-btn">
+                                   <option value="3024-night">3024-night</option>
+                                   <option value="ayu-dark">ayu-dark</option>
+                                   <option value="base16-dark" selected>base16-dark</option>
+                                   <option value="duotone-dark">duotone-dark</option>
+                              </select>
+                         </li>
+                         <li>
+                              <span>Font</span>
+                              <select id="font-switch-btn">
+                                   <option value="monospace">monospace</option>
+                                   <option value="monaco" selected>monaco</option>
+                                   <option value="Ubuntu Mono">Ubuntu Mono</option>
+                                   <option value="Fira Code">Fira Code</option>
+                              </select>
+                         </li>
+                         <li>
+                              <span>Font Size</span>
+                              <select id="font-size-switch-btn">
+                                   <option value="14px">14px</option>
+                                   <option value="16px" selected>16px</option>
+                                   <option value="18px">18px</option>
+                                   <option value="20px">20px</option>
+                              </select>
+                         </li>
+                         <li>
+                              <span>Export</span>
+                              <span class="export-options">
+                                   <span onclick="exportImage(1)" style="color: #ffbd2d;">1x</span>
+                                   <span onclick="exportImage(2)" style="color: #ff5e56;">2x</span>
+                                   <span onclick="exportImage(3)" style="color: #27c93f;">4x</span>
+                              </span>
+                         </li>
+                    </ul>
+               </nav>
+          </div>
+
+          <div class="sidebar">
+               <div class="desc">
+                    Write & Share
+               </div>
+               <div class="social-links">
+                    <a href="https://www.teknokodi.com"><img src="img/site.png" alt=""></a>
+                    <a href="https://github.com/cnahmetcn/screencodes"><img src="img/git.png" alt=""></a> 
+               </div>
+               <img src="img/info.png" class="info-icon">
+          </div>
+
+          <div class="msg-container">
+               <div class="editor">
+                    <div class="preview-wrapper">
+                         <div class="loading">
+                              <div class="lds-ring">
+                                   <div></div>
+                                   <div></div>
+                                   <div></div>
+                                   <div></div>
+                              </div>
+                         </div>
+                         <div class="preview" id="preview">
+                              <div class="karton-logo"></div>
+                              <div class="preview-top">
+                                   <span></span>
+                                   <div class="title" id="title"></div>
+                                   <div></div>
+                              </div>
+                              <textarea name="" id="textarea" const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          
+          const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+          
+          const unfold = (f, seed) => {
+            const go = (f, seed, acc) => {
+              const res = f(seed)
+              return res ? go(f, res[1], acc.concat([res[0]])) : acc
+            }
+            return go(f, seed, [])
+          }</textarea>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+	<script src="codemirror/lib/codemirror.js"></script>
+	<script src="codemirror/addon/edit/matchbrackets.js"></script>
+     <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+     <script src="codemirror/mode/xml/xml.js"></script>
+     
+	<script src="codemirror/mode/javascript/javascript.js"></script>
+	<script src="codemirror/mode/css/css.js"></script>
+	<script src="codemirror/mode/sass/sass.js"></script>
+	<script src="codemirror/mode/clike/clike.js"></script>
+     <script src="codemirror/mode/php/php.js"></script>
+     <script src="codemirror/mode/dart/dart.js"></script>
+     <script src="codemirror/mode/go/go.js"></script>
+     <script src="codemirror/mode/markdown/markdown.js"></script>
+     <script src="codemirror/mode/python/python.js"></script>
+     <script src="codemirror/mode/r/r.js"></script>
+     <script src="codemirror/mode/ruby/ruby.js"></script>
+     <script src="codemirror/mode/shell/shell.js"></script>
+     <script src="codemirror/mode/sql/sql.js"></script>
+     <script src="codemirror/mode/swift/swift.js"></script>
+     <script src="codemirror/mode/vb/vb.js"></script>
+     <script src="codemirror/mode/vue/vue.js"></script>
+     
+	<script src="html2canvas.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

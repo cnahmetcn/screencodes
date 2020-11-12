@@ -1,0 +1,175 @@
+@import"codemirror/lib/codemirror.css";
+@import"https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Fira+Code&display=swap";
+
+
+*{
+     margin:  0;
+     padding: 0;
+     font-family: sans-serif;
+}
+
+.container{
+     width: 100%;
+     height: 100vh;
+     background-image: url(img/bg.jpg);
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     padding-top: 0px;
+     box-sizing: border-box;
+}
+
+.navbar{
+     width: 100%;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     background: rgba(0, 193, 252, 0.5);
+     padding: 0 60px;
+     box-sizing: border-box;
+}
+
+.logo{
+     width: 155px;
+     color: white;
+}
+
+
+
+nav{
+     flex: 1;
+     color: #fff;
+     cursor: pointer;
+}
+
+nav ul li{
+     list-style: none;
+     display: inline-block;
+     margin-right: 20px;
+}
+
+nav ul li a{
+     text-decoration: none;
+     color: #fff;
+     font-size: 14px;
+}
+
+.sidebar{
+     width: 155px;
+     height: 100vh;
+     background: rgba(0, 193, 252, 0.5);
+     position: absolute;
+     top: 0;
+     left: 0;
+}
+
+.social-links{
+     width: 40px;
+     display: block;
+     margin: 200px auto 0;
+     text-align: center;
+}
+
+.desc{
+     width: 40px;
+     display: block;
+     margin: 100px auto 0;
+     text-align: center;
+     color: white;
+     font-weight: bold;
+}
+
+.social-links img{
+     height: 50px;
+     margin-bottom: 30px;
+}
+
+.info-icon{
+     width: 20px;
+     position: absolute;
+     left: 50%;
+     bottom: 30px;
+     transform: translateX(-50%);
+}
+
+.msg-contafiner{
+     position: absolute;
+     left: 10%;
+     top: 34%;
+     transform: translateY(-50%);
+     overflow: hidden;
+}
+
+
+.editor {
+     position: absolute;
+     left: 10%;
+     overflow-y: hidden;
+ }
+ 
+ 
+ .editor .preview-wrapper {
+     width: 1380px;
+     height: 500;
+ }
+ 
+
+ 
+ 
+
+ .editor .preview .preview-top {
+     height: 40px;
+     min-height: 40px;
+     background: #000000;
+     border-radius: 5px 5px 0 0;
+     display: flex;
+     align-items: center;
+     padding: 0 20px;
+     justify-content: space-between
+ }
+ 
+ .editor .preview .preview-top .title {
+     font-size: 14px;
+     color: rgba(255, 255, 255)
+ }
+ 
+ .editor .preview .preview-top span {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #ffbd2d;
+     position: relative;
+     margin-left: 15px
+ }
+ 
+ .editor .preview .preview-top span::before,
+ .editor .preview .preview-top span::after {
+     content: "";
+     width: inherit;
+     height: inherit;
+     border-radius: inherit;
+     position: absolute
+ }
+ 
+ .editor .preview .preview-top span::before {
+     left: -17px;
+     background: #ff5e56
+ }
+ 
+ .editor .preview .preview-top span::after {
+     right: -17px;
+     background: #27c93f
+ }
+ 
+ .editor .preview .CodeMirror {
+     text-align: left;
+     flex: 1;
+     font-family: monaco;
+     padding: 0 15px 15px;
+     line-height: 1.7;
+     width: auto;
+     height: auto;
+     resize: horizontal
+ }
+ 
